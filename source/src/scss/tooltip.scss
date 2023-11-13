@@ -1,0 +1,23 @@
+.tooltip {
+    @apply relative max-w-[100%];
+
+    &:hover {
+        .tooltip-content {
+            display: flex;
+        }
+    }
+
+    &-content {
+        @apply absolute bottom-full mb-1 text-neutral-1-900 font-normal bg-white rounded p-2 hidden normal-case whitespace-nowrap;
+
+        &:after {
+            border: solid;
+            border-color: black transparent;
+            border-width: 4px 8px 0 8px;
+            content: "";
+            left: 45%;
+            top: 100%;
+            position: absolute;
+        }
+    }
+}

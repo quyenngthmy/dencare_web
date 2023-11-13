@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts/font-icon/style.css';
+// @import './fonts/OpenSans/style.css';
+@import "./scss/animation.scss";
+@import "./scss/tooltip.scss";
+@import "./scss/index.scss";
+
+.list-branch {
+  @apply relative w-full h-fit ;
+  display: inline-block; 
+
+  select {
+    @apply appearance-none cursor-pointer relative focus:outline-none py-3 px-4 text-neutral-1-600 text-body-2 w-full bg-white border border-neutral-2-200 rounded-md;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;  
+    &::-ms-expand { display: none };  
+  }
+  &::after {
+    position: absolute;
+    font-family:'TwebIcons-12';
+    content: "\e900";
+    font-size: 24px;
+    line-height: 24px;
+    color: #2C333A;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transform: rotate(-90deg)
+  }
+}
+
+.modal-schedule{
+  @apply -top-full opacity-0;
+  transition: top .3s ease-in-out .3s, opacity .3s ease-in-out;
+  &.show{
+    @apply top-0 opacity-100;
+    transition: top .1s ease-in-out, opacity .3s ease-in-out .1s;
+  }
+}
+
+// #appointmentDate{
+//   @apply relative px-3.5 py-3 w-full bg-none rounded-lg placeholder:text-text-3 text-text-1 text-body-1 border-none outline-0 z-0 bg-white font-OpenSans;
+// }
+
+// #appointmentDate{
+//   &::after{
+//     @apply text-[24px] absolute right-3.5 top-3.5 -z-10 text-text-1 ;
+//     font-family: "TwebIcons-12"!important;
+//       content: "\e903";
+//   }
+// }
+// #appointmentDate::-webkit-calendar-picker-indicator{
+//   opacity:0;
+// }
+
+.ant-picker .ant-picker-input >input {
+  border-color: white !important;
+}
+
+// Form time 
+.rs-picker-menu {
+  z-index: 70;
+  @apply fixed;
+}
+.rs-stack-item {
+  & svg {
+    @apply hidden
+  }
+}
+.appointmentTime, .appointmentDate{
+  & div {
+    border: 0px !important;
+    padding: 0px !important;
+  }
+  & input {
+    color: #2C333A !important;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0px;
+  }
+  
+  & .rs-picker-toggle-active {
+    box-shadow: none;
+  }
+}
+
+.rs-picker-toolbar-right {
+  & button {
+    @apply bg-primary-1
+  }
+}
+
+.rs-picker-toggle-value, .rs-calendar-header-title {
+  color: #2C333A !important;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.appointmentTime {
+  &::after{
+    @apply text-[24px] absolute right-3.5 top-3.5 text-text-1 z-10;
+    font-family: "TwebIcons-12"!important;
+      content: "\e908";
+  }
+}
+.appointmentDate {
+  &::after{
+    @apply text-[24px] absolute right-3.5 top-3.5 text-text-1 z-10;
+    font-family: "TwebIcons-12"!important;
+      content: "\e903";
+  }
+}
