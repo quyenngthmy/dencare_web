@@ -35,14 +35,18 @@ npm install
 
 ### Scripts
 List and explain the available npm scripts:
+
+Start the development server:
 ```
-npm start: Start the development server.
+npm start
 ```
+Build the project for production:
 ```
-npm run build: Build the project for production.
+npm run build
 ```
+Run tests:
 ```
-npm test: Run tests.
+npm test
 ```
 ### Folder Structure
 Explain the purpose of each important folder in your project.
