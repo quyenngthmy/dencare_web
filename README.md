@@ -22,7 +22,7 @@ Make sure you have the following software installed before proceeding:
 
 1. Clone the repository:
 ```
-git clone https://github.com/quyenngthmy/pharmacy_web.git
+git clone https://github.com/quyenngthmy/dencare_web.git
 ```
 2. Navigate to the project directory:
 ```
